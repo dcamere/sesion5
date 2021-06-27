@@ -1,0 +1,24 @@
+# Default values for helm-package.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: "ghcr.io/dcamere/sesion5"
+  tag: "27f01d9fa55d29f4c29f6c52f7d2264efd5d395e"
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+
+imagePullSecrets: []
+
+service:
+  type: ClusterIP
+  port: 80
+  domain: tocino.wyracocha.com
+
+autoscaling:
+  replicaCount: 3
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80

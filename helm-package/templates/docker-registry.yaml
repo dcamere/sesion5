@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Chart.Name }}
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJnaGNyLmlvIjp7InVzZXJuYW1lIjoiZGNhbWVyZSIsInBhc3N3b3JkIjoiZ2hwX0txM0hCSms2bXZaQUE1TVdEeGFYWUFuTmI1NlJ3NTRLZkdZNyIsImVtYWlsIjoiZGNhbWVyZUBnbWFpbC5jb20iLCJhdXRoIjoiWkdOaGJXVnlaVHBuYUhCZlMzRXpTRUpLYXpadGRscEJRVFZOVjBSNFlWaFpRVzVPWWpVMlVuYzFORXRtUjFrMyJ9fX0=
+type: kubernetes.io/dockerconfigjson
